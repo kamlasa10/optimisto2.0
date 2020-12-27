@@ -1,0 +1,198 @@
+@import "./progress";
+
+#news-page {
+  background-color: #e5e5e5;
+  .more {
+    min-height: auto;
+    background-color: transparent;
+
+    &__desc {
+      font-size: 24px;
+
+      @include to(1440px) {
+        font-size: 22px;
+      }
+    }
+  }
+
+  .footer__decor {
+    display: none;
+  }
+  
+  @include to(1025px) {
+
+    .footer {
+      position: absolute;
+      bottom: 20px;
+      z-index: 17;
+      margin-bottom: 20px;
+    }
+
+    .fixed-content {
+      z-index: 16;
+    }
+  }
+
+  @include to(770px) {
+
+    .date {
+      position: relative;
+      z-index: 5;
+    }
+
+    .footer {
+      z-index: 15;
+    }
+
+    .fixed-content {
+      z-index: 14;
+    }
+
+    .fixed-content .socials{
+      opacity: 0;
+      z-index: -1;
+    }
+  }
+
+  @include to(480px) {
+    overflow: visible;
+    .offset-top {
+      padding-top: 37px !important;
+    }
+
+    .news {
+      padding-bottom: 0;
+    }
+
+    .slider {
+      min-height: auto;
+    }
+
+    .footer__decor {
+      display: block;
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 0;
+      margin-bottom: 0;
+    }
+
+    .more {
+      padding-top: 10vh !important;
+    }
+  }
+
+  @include to(325px) {
+    .more {
+      padding-top: 15px !important;
+      margin-top: -10vh;
+    }
+  }
+}
+
+.news {
+  position: relative;
+
+  @include to(480px) {
+    margin-bottom: 0;
+    min-height: 100vh;
+  }
+}
+
+.news-page {
+
+  .slider {
+    position: relative;
+    padding-bottom: 135px;
+    min-height: 100vh;
+
+    @include to(1025px) {
+      padding-bottom: 160px;
+
+      &__item {
+        margin-right: 50px;
+      }
+    }
+
+    @include to(770px) {
+      padding-bottom: 170px;
+      min-height: calc(100vh - 43px);
+
+      &__item {
+        margin-right: 18px;
+      }
+    }
+
+    @include to(480px) {
+      padding-bottom: 80px;
+    }
+
+    @include to(320px) {
+      padding-bottom: 65px;
+    }
+  }
+}
+
+.news {
+  @include to(480px) {
+    .slider__wrap {
+      margin-top: -7vh !important;
+    }
+
+    .more__desc {
+      margin-top: 10px;
+      font-size: 18px;
+    }
+
+    .footer {
+      position: static;
+    }
+  }
+  
+  &__content {
+    position: relative;
+    padding-left: 34px;
+  }
+
+  &__desc {
+    text-align: left;
+  }
+
+  &__intro {
+    text-align: left;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+    visibility: visible;
+  }
+
+  .slider__wrap {
+    margin-top: 8vh;
+
+    @include to(1440px) {
+      margin-top: -5vh;
+    }
+
+    @include to(770px) {
+      margin-bottom: 50px;
+      margin-top: -10vh;
+    }
+
+    @include to(480px) {
+      margin-bottom: 0;
+    }
+  }
+
+  .date {
+    margin-top: 0;
+  }
+
+  &__date {
+    top: 31px;
+    position: absolute;
+    left: -30px;
+    transform: rotate(-90deg);
+  }
+}

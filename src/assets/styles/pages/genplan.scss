@@ -1,0 +1,233 @@
+#genplan-page {
+
+    @include to(770px) {
+        overflow: hidden;
+    }
+
+    @include to(480px) {
+        overflow: visible;
+
+        .wrapper {
+            overflow: visible;
+        }
+    }
+
+    .footer {
+        display: none;
+
+        @include to(480px) {
+            display: block;
+            position: fixed;
+            bottom: 0;
+        }
+    }
+
+    .header {
+        background-color: #fff;
+    }
+
+    .language {
+        .language__select-item {
+            color: #240A3A;
+        }
+
+        .language__select {
+            background-color: #fff;
+        }
+    }
+
+    .genplan__phone {
+        position: absolute;
+        bottom: 20px;
+        right: 0;
+    }
+
+    .fixed-content .socials {
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+.genplan {
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start;
+
+    &__wrap {
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        padding-top: 116px;
+
+        @include to(800px) {
+            flex-direction: column;
+            min-height: calc(100vh - 96px);
+            padding-top: 96px;
+        }
+
+        @include to(480px) {
+            padding-top: 69px;
+        }
+    }
+
+    &__left {
+        width: 78%;
+
+        @include to(1025px) {
+            width: 73%;
+        }
+
+        @include to(770px) {
+            width: 100%;
+
+            svg {
+                height: 100%;
+            }
+        }
+
+        @include to(480px) {
+            height: 69vh;
+        }
+
+        @include to(320px) {
+            height: 55vh;
+        }
+
+        &-wrap {
+            width: 100%;
+            position: relative;
+            height: 100%;
+
+            @media (min-width: 1445px) {
+                svg {
+                    height: 100%;
+                }
+            }
+
+            svg path {
+                opacity: 0;
+                transition: all 0.4s;
+                position: relative;
+                z-index: 10;
+                cursor: pointer;
+
+                &:hover {
+                    opacity: 1;
+                }
+
+                &.active {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &__right {
+        padding: 25px 30px;
+        color: #fff;
+        width: 22%;
+        background-color: $darkPurple;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        @include to(1025px) {
+            width: 27%;
+        }
+
+        @include to(770px) {
+            align-items: flex-start;
+            padding-left: 66px;
+            padding-right: 66px;
+            padding-top: 40px;
+            margin-top: -8px;
+            width: 100%;
+            min-height: 37.5vh;
+        }
+
+        @include to(480px) {
+            padding-top: 15px;
+            min-height: 15vh;
+            position: fixed;
+            top: 78vh;
+            align-items: center;
+        }
+
+        &-content {
+            @include to(480px) {
+                display: none;
+            }
+        }
+    }
+
+    &__title {
+        margin-top: -14vh;
+        margin-bottom: 26px;
+        color: #fff;
+
+        @include to(770px) {
+            margin-top: 0;
+        }
+    }
+
+    &__list {
+        height: 300px;
+        overflow: hidden;
+        overflow-y: auto;
+        margin-bottom: 30px;
+
+        @include to(770px) {
+            height: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: 60px;
+            row-gap: 15px;
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        position: relative;
+        margin-bottom: 16px;
+        transition: all .4s;
+        cursor: pointer;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &--active {
+            transform: translateX(15px);
+        }
+
+        &::before {
+            content: "";
+            display: block;
+            width: 3px;
+            height: 3px;
+            margin-right: 13px;
+            border-radius: 50%;
+            background-color: #fff;
+        }
+
+        &--circle {
+            &::before {
+                display: none;
+            }
+        }
+    }
+
+    &__link {
+        justify-self: flex-end;
+        position: absolute;
+        bottom: 25%;
+
+        @include to(480px) {
+            position: relative;
+            bottom: 0;
+            z-index: 10;
+        }
+    }
+}

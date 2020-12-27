@@ -1,0 +1,159 @@
+extends ../layout/main
+block variable
+    -
+        var id_page = 'technical-page'
+        var class_page = "technical-page"
+        var color = 'dark'
+        var decor = true
+	
+block meta
+    title= 'Главная'
+    meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+    script(src='./assets/scripts/index.js')
+    script(src='./assets/scripts/technical.js')
+block content
+    .wrapper
+        .fixed-content.intro-fixed-content
+            .container
+                .socials.socials--fixed
+                    .container
+                        .socials__title © 2020 Smile Development
+                        a(href="https://www.instagram.com/optimisto.com.ua/?hl=ru").socials__link.socials__link--inst
+                            +svg('inst')
+                        a(href="https://www.facebook.com/optimisto.com.ua").socials__link.socials__link--fb
+                            +svg('fb')
+                .fixed-content__triangle
+                .phone--green.header__phone.js-header__phone
+                    a(href="tel:0442992203").phone__link.phone__link--purple
+                        span.phone__text (044) 299-22-03
+                        span.btn-round.phone__btn
+                            +svg('phone')
+        section.promo.offset-header.section.gs_screen-trigger.gs_screen-trigger-first
+            .promo__left
+                .promo__left-small-leaflet
+                    +img('two-leaflet.png')
+                .promo__left-decor.gs_reveal.gs_reveal-fs-left
+                    +img('leaflet-small-promo.png')
+                .promo__left-content.gs_reveal.gs_reveal-fs-text
+                    .promo__small-title Технічні параметри житла
+                    .promo__desc Технічні параметри житла — важливий аспект, який впливає на рішення про купівлю. Покупці хочуть переконатися, що у квартирі буде комфортно, і переймаються тим, скільки часу і коштів доведеться витратити на ремонт.
+                    .promo__desc Докладно розповідаємо про технічні характеристики квартир у ЖК Оптимісто.
+            .promo__right
+                .promo__right-decor.gs_reveal.gs_reveal-fs-right
+                    +img('leaflet-big-promo.png')
+                .promo__title.title-with-linear.gs_reveal.gs_reveal-fs-title Технічні характеристики квартир
+                    +svg('linear')
+                .promo__video
+                    +img('Exclude-promo.svg').promo__video--decor
+                    video(autoplay muted)
+                        source(src="static/promo-video.mp4" type="video/mp4")
+                        source(src="static/promo-video.webm" type="video/webm")
+                        source(src="static/promo-video.ogg" type="video/ogg")
+        section.technical.section
+            .container
+                .technical__tabs-wrap
+                    .technical__tabs-current
+                        .technical__triangle
+                        .technical__item-img
+                            +img('technical.svg')
+                            +img('technical-active.svg').technical__item-svg
+                        .technical__item-title Стіни та підлога
+                    .technical__tabs
+                        .technical__item.technical__item--1
+                            .technical__item-img
+                                +img('technical.svg')
+                                +img('technical-active.svg').technical__item-svg
+                            .technical__item-title Стіни та підлога
+                        .technical__item.technical__item--2
+                            .technical__item-img
+                                +img('technical2.svg')
+                                +img('technical-active2.svg').technical__item-svg
+                            .technical__item-title Двері
+                        .technical__item.technical__item--3
+                            .technical__item-img
+                                +img('technical3.svg')
+                                +img('technical-active3.svg').technical__item-svg
+                            .technical__item-title Вікна
+                        .technical__item.technical__item--4
+                            .technical__item-img
+                                +img('technical4.svg')
+                                +img('technical-active4.svg').technical__item-svg
+                            .technical__item-title Водопостачання 
+                        .technical__item.technical__item--5
+                            .technical__item-img
+                                +img('technical5.svg')
+                                +img('technical-active5.svg').technical__item-svg
+                            .technical__item-title Опалення
+                        .technical__item.technical__item--6
+                            .technical__item-img
+                                +img('technical6.svg')
+                                +img('technical-active6.svg').technical__item-svg
+                            .technical__item-title Комунікації
+                        .technical__item.technical__item--7
+                            .technical__item-img
+                                +img('technical7.svg')
+                                +img('technical-active7.svg').technical__item-svg
+                            .technical__item-title Фасад
+                .technical__content
+                    .technical__content-item
+                        .technical__content-left
+                            +img('technical-img.png')
+                        .technical__content-right
+                            .technical__content-right-wrap
+                                .technical__content-desc Теплі, просторі та світлі — саме такі квартири ми спроектували для майбутніх мешканців. 
+                                .technical__content-desc Будинки ЖК Оптимісто зводяться за монолітно-каркасною технологією. Стіни — з газоблоку, утеплені мінеральною ватою.
+                                .technical__content-desc Висота від підлоги до стелі — 2.7 м. Цементно-піщана стяжка підлоги (крім санвузлів) 7 см товщиною. У санвузлах — гідроізоляція. Розведення труб під рушникосушку – від котла до санвузла, у 2-кімнатних квартирах — в один із двох санвузлів. 
+                    .technical__content-item
+                        .technical__content-left
+                            +img('technical-img2.png')
+                        .technical__content-right
+                            .technical__content-right-wrap
+                                .technical__content-desc У квартирах ЖК Оптимісто встановлено надійні вхідні металеві двері з МДФ накладками з обох сторін і з двома замками. Безпека — понад усе. 
+                    .technical__content-item
+                        .technical__content-left
+                            +img('technical-img3.png')
+                        .technical__content-right
+                            .technical__content-right-wrap
+                                .technical__content-desc Забудовник встановлює якісні металопластикові вікна з двокамерними енергозберігаючими склопакетами. Вони зберігають тепло, і їх не доведеться міняти під час ремонту.
+                    .technical__content-item
+                        .technical__content-left
+                            +img('technical-img4.png')
+                        .technical__content-right
+                            .technical__content-right-wrap
+                                .technical__content-desc У квартирах проводиться часткова розводка. Холодне водопостачання – до сантехнічних приміщень (санвузли).
+                                .technical__content-desc Гаряче водопостачання – від двоконтурного газового котла до сантехнічних приміщень (санвузли). Каналізація – на стояках встановлюється трійник (хрестовина) із заглушкою, для подальшого підключення.
+                                .technical__content-desc Електропостачання проводиться до місця встановлення квартирного щита (без фурнітури), без щитка. Газопостачання – від газового стояка в приміщенні кухні. Лічильники холодного водопостачання та електропостачання знаходяться у місцях загального користування, газопостачання – всередині квартири.
+                    .technical__content-item
+                        .technical__content-left
+                            +img('technical-img5.png')
+                        .technical__content-right
+                            .technical__content-right-wrap
+                                .technical__content-desc Ми відповідально підійшли до питання опалення, врахувавши всі фактори — зручність для мешканців та економність. Опалення у квартирах – автономне, від двоконтурного газового котла з прокладкою труб до котла, від котла до опалювальних приладів в стяжці. Ви самостійно створюєте комфортний мікроклімат у вашому домі. Опалювальні прилади – сталеві панельні радіатори з нижнім підключенням із можливістю встановлення терморегулятора температури.
+                                .technical__content-desc Газова труба на другому поверсі проходить через квартиру (над аркою газова труба заходить в квартиру на третьому поверсі). Місце встановлення, висоту встановлення газового котла змінювати заборонено з міркувань безпеки. Пуск газового котла здійснюється рекомендованою компанією від забудовника для збереження гарантійних випадків на газові котли.
+                    .technical__content-item
+                        .technical__content-left
+                            +img('technical-img6.png')
+                        .technical__content-right
+                            .technical__content-right-wrap
+                                .technical__content-desc Ми вже підготували комунікації до вашого заселення. 
+                                .technical__content-desc Інтернет – заведено кабель у коридор квартири, інвестор вибирає одного із двох запропонованих провайдерів (Сімнет, Максимумнет).
+                                .technical__content-desc Домофон — заведено кабель у коридор квартири, інвестор встановлює самостійно внутрішній домофон (система передбачає лише відеодомофон. Ціна від 100 у.о.)
+                    .technical__content-item
+                        .technical__content-left
+                            +img('technical-img7.png')
+                        .technical__content-right
+                            .technical__content-right-wrap
+                                .technical__content-desc Ми подбали про збереження естетики фасадів будинків — протягом багатьох років ваш улюблений будинок милуватиме око стильним дизайном. Встановлення зовнішніх блоків кондиціонерів можливе лише у кошики, вивід для конденсату виводиться в площині кошику. 
+                                .technical__content-desc Заміна вікон – за проектом УК.
+        footer.footer
+            include ../includes/footer.pug
+
+block header
+    header.header.header--dark.header--bg
+        include ../includes/header.pug
+block menu
+    include ../includes/menu.pug
+

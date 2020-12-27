@@ -1,0 +1,229 @@
+#3d-tour-page {
+    .footer--fixed {
+        display: none;
+    }
+
+    .fixed-content--end .socials {
+        display: none;
+    }
+
+    .fixed-content--end .container {
+        justify-content: space-between;
+    }
+}
+
+
+.tour {
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 700px;
+        height: 642px;
+        background-color: #fff;
+        border-radius: 50%;
+        z-index: 2;
+        transform: translate(28%, 81%);
+
+        @include to(1440px) {
+            transform: translate(35%, 83%);
+        }
+
+        @include to(480px) {
+            display: none;
+        }
+    }
+
+    &__frame {
+        width: 100%;
+        height: 100vh;
+        border: none;
+    }
+
+    &__intro {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 40px;
+        background-color: #fff;
+        padding: 25px 30px;
+        width: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include to(1440px) {
+            width: 430px;
+        }
+
+        @include to(480px) {
+            width: 100%;
+        }
+
+        &-close {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 30px;
+            align-self: flex-end;
+
+            .menu__right-close-text {
+                color: $text;
+            }
+        }
+
+        &-title {
+            font-size: 24px;
+            line-height: 1.5em;
+            color: $darkPurple;
+            font-weight: 500;
+            margin-bottom: 16px;
+
+            @include to(1440px) {
+                font-size: 20px;
+            }
+        }
+
+        &-desc {
+            margin-bottom: 25px;
+        }
+
+        &-start {
+            display: flex;
+            align-items: center;
+
+            svg {
+                margin-right: 5px;
+                width: 16px;
+                height: 16px;
+
+                @include to(1440px) {
+                    width: 13px;
+                    height: 13px;
+                }
+            }
+
+            span {
+                font-weight: 600;
+            }
+        }
+
+        &-content {
+            padding-bottom: 50px;
+            width: 350px;
+
+            @include to(1440px) {
+                width: 300px;
+            }
+        }
+    }
+
+    &__details {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+
+        @include to(1025px) {
+            z-index: 10;
+        }
+
+        @include to(770px) {
+            bottom: 15%;
+        }
+
+        @include to(480px) {
+            bottom: 20%;
+        }
+
+        &-title {
+            @include to(480px) {
+                margin-left: -40px;
+            }
+        }
+
+        &-content {
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%) translateY(100%);
+            z-index: 8;
+            border-radius: 40px 40px 0px 0px;
+            background-color: #fff;
+            padding-top: 45px;
+            padding-right: 45px;
+            padding-left: 45px;
+            width: 750px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: all .6s;
+
+            @include to(770px) {
+                z-index: 11;
+            }
+
+            @include to(480px) {
+                width: 100%;
+                padding-left: 60px;
+                padding-right: 20px;
+            }
+
+            &--show {
+                transform: translateX(-50%) translateY(0);
+            }
+        }
+
+        &-close {
+            display: flex;
+            justify-content: flex-end;
+            align-self: flex-end;
+
+            .menu__right-close-text {
+                color: $text;
+            }
+        }
+
+        &-desc {
+            margin-bottom: 20px;
+        }
+
+        &-wrap {
+            max-width: 450px;
+        }
+
+        &-list {
+            height: 280px;
+            padding-bottom: 20px;
+            overflow-y: auto;
+            padding-right: 20px;
+
+            @include to(480px) {
+                &::-webkit-scrollbar {
+                    width: 2px;
+                    background-color: $green;
+                  }
+                  
+                  /* Track */
+                  &::-webkit-scrollbar-track {
+                    background: #f4f4f2;
+                  }
+                  
+                  /* Handle */
+                  &::-webkit-scrollbar-thumb {
+                    background: darken($green, 5%);
+                  }
+                  
+                  /* Handle on hover */
+                  &::-webkit-scrollbar-thumb:hover {
+                    background: darken($green, 5%);
+                  }
+            }
+        }
+    }
+}

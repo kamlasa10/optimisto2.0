@@ -1,0 +1,63 @@
+[33mcommit 485fc58f19714d1be417561b4bc3916dc9e08b46[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Vlad Verstalshik <kamlasa@ukr.net>
+Date:   Fri Dec 4 16:24:34 2020 +0200
+
+    change
+
+[33mcommit 7f8959d3a15131fc5881afb82c907136e46dd93b[m
+Author: Vlad Verstalshik <kamlasa@ukr.net>
+Date:   Fri Dec 4 16:19:01 2020 +0200
+
+    fix
+
+[33mcommit 856f28aa4958e75e0afb56450aeb25b869b7ef8c[m[33m ([m[1;31morigin/vadym[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: vadymshukr <vadymshukr@gmail.com>
+Date:   Fri Dec 4 09:05:50 2020 +0200
+
+    Conflict fix
+
+[33mcommit a8ae2f5d0293a2d18b5cf3386626959fe2ad764e[m
+Merge: 77c868f d5aeabc
+Author: vadymshukr <vadymshukr@gmail.com>
+Date:   Fri Dec 4 08:59:57 2020 +0200
+
+    TEST
+
+[33mcommit d5aeabc598fb2dd7707825834757d842f8052fa4[m
+Merge: 51320f3 d1238a1
+Author: kamlasa10 <kamlasa@ukr.net>
+Date:   Fri Dec 4 08:55:01 2020 +0200
+
+    Merge pull request #1 from kamlasa10/vladik
+    
+    check
+
+[33mcommit 77c868f9577cb972451e587330ea0b24dfdd06fd[m
+Author: vadymshukr <vadymshukr@gmail.com>
+Date:   Fri Dec 4 08:53:41 2020 +0200
+
+    Bug on progress page fixed
+
+[33mcommit d1238a1732bd9e924875d71a88c2c046c6882d56[m[33m ([m[1;31morigin/vladik[m[33m)[m
+Author: Vlad Verstalshik <kamlasa@ukr.net>
+Date:   Fri Dec 4 08:53:40 2020 +0200
+
+    check
+
+[33mcommit 636e5777fe904d33f10f7c2d7c5d541b463cd49d[m
+Author: vadymshukr <vadymshukr@gmail.com>
+Date:   Fri Dec 4 08:20:40 2020 +0200
+
+    Animations on most page done, progress page need to redone
+
+[33mcommit 51320f377fde8d0f7e97567701035e161366f591[m
+Author: vadymshukr <vadymshukr@gmail.com>
+Date:   Wed Dec 2 12:25:48 2020 +0200
+
+    Smooth scroll fixed and css for scrollbar added
+
+[33mcommit bf4272e1171afcd6991ed91ec2db729b67cfcb84[m
+Author: Vlad Verstalshik <kamlasa@ukr.net>
+Date:   Wed Dec 2 11:50:43 2020 +0200
+
+    start

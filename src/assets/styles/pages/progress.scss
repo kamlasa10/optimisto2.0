@@ -1,0 +1,169 @@
+// Styles
+
+#progress-page {
+    overflow: hidden;
+    background-color: #e5e5ee;
+    height: 100vh;
+    max-width: 100vw;
+
+    @include to(1025px) {
+        .breadcrumbs {
+            padding-top: 120px;
+        }
+    }
+
+    @include to(480px) {
+        height: auto;
+        overflow: visible;
+
+        .section {
+            padding-bottom: 90px;
+        }
+    }
+
+    @include to(320px) {
+        .breadcrumbs {
+            padding-top: 60px;
+        }
+    }
+
+    .more__img {
+        width: 100%;
+        height: 350px;
+
+        @include to(1440px) {
+            height: 310px;
+        }
+
+        @include to(480px) {
+            height: 260px;
+        }
+
+        &-wrap {
+            width: 100%;
+            height: 100%;
+        }
+
+        img {
+            object-fit: cover;
+            clip-path: circle(50% at 50% 50%);
+
+            @include to(1025px) {
+                clip-path: circle(47% at 50% 50%);
+            }
+
+            @include to(480px) {
+                clip-path: circle(48% at 50% 50%);
+            }
+
+            @include to(320px) {
+                clip-path: circle(46% at 50% 50%);
+            }
+        }
+    }
+
+    .fixed-content {
+        z-index: 10;
+    }
+
+    .footer {
+        bottom: 17px;
+    }
+
+    .progress {
+        overflow: hidden;
+    }
+    .footer__decor {
+        display: none;
+    }
+
+    @include to(1025px) {
+        .fixed-content--end {
+            .container {
+                justify-content: space-between;
+            }
+        }
+
+        .gallery__preview-block {
+            display: none;
+            z-index: 30;
+        }
+
+        .footer--fixed {
+            z-index: 9;
+        }
+
+        .slider__wrap {
+            margin-top: -4vh;
+        }
+        
+        .slider-control {
+            bottom: -350px;
+            left: 56%;
+
+            @include to(770px) {
+                left: 50%;
+                bottom: -390px;
+            }
+        }
+    }
+    
+
+    @include to(770px) {
+        & {
+            overflow: visible;
+        }
+
+        .footer {
+            z-index: 14;
+        }
+
+        .fixed-content {
+            z-index: 13;
+        }
+
+        .progress {
+            min-height: 100vh;
+        }
+
+        .slider__wrap {
+            margin-top: 5vh;
+        }
+
+        .slider-control {
+            bottom: -320px;
+        }
+    }
+
+    @include to(480px) {
+        .wrapper {
+            position: relative;
+        }
+
+        .link-with-triangle {
+            opacity: 0;
+            z-index: -1;
+        }
+
+        .footer__decor {
+            display: block;
+            top: -92px;
+        }
+
+        .footer {
+            bottom: 0;
+            position: absolute;
+        }
+    }
+
+    @include to(320px) {
+        .slider__wrap {
+            margin-top: -14vh;
+        }
+    }
+
+    .more {
+        min-height: auto;
+        background-color: transparent;
+    }
+}

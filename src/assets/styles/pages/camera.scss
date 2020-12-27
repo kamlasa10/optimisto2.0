@@ -1,0 +1,193 @@
+// Styles
+
+#camera-page {
+    position: relative;
+    background-color: #E5E5E5;
+
+    .footer__decor {
+        display: none;
+
+        @include to(480px) {
+            display: block;
+            top: -92px;
+        }
+
+        @include to(320px) {
+            top: -89px;
+        }
+    }
+
+    @include to(1025px) {
+        .fixed-content {
+            .container {
+                justify-content: space-between;
+            }
+        }
+    }
+
+    @include to(770px) {
+        .fixed-content {
+            .socials {
+                display: none;
+            }
+
+            .container {
+                justify-content: flex-end;
+            }
+        }
+
+        .link-with-triangle {
+            align-self: flex-end;
+
+            @include to(480px) {
+                margin-bottom: 80px;
+                align-self: flex-start;
+            }
+        }
+
+        .footer {
+            .container {
+                padding-left: 20px;
+            }
+        }
+    }
+
+    @include to(480px) {
+        .footer {
+            position: static;
+            margin-top: auto;
+        }
+    }
+
+    .camera__decor {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        display: flex;
+        
+        svg {
+            display: block;
+            margin-top: auto;
+            z-index: -1;
+            width: 45vw;
+            height: 55vh;
+
+            @include to(1440px) {
+                width: 53vw;
+                height: 45vh;
+            }
+
+            @include to(770px) {
+                width: 58vw;
+                height: 48vh;
+            }
+
+            @include to(480px) {
+                width: 90vw;
+                height: 32vh;
+            }
+        }
+    }
+}
+
+.camera {
+    @include to(770px) {
+        min-height: 100vh;
+    }
+
+    @include to(480px) {
+        padding-bottom: 0;
+        display: flex;
+        flex-direction: column;
+
+        & .container {
+            width: 100% !important;
+            max-width: auto;
+            padding-left: 15px;
+        }
+    }
+
+    &__wrap {
+        position: relative;
+        z-index: 2;
+        display: flex;
+
+        @include to(770px) {
+            flex-direction: column;
+        }
+    }
+
+    &__tabs {
+        margin-right: 74px;
+
+        @include to(770px) {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            column-gap: 51px;
+            row-gap: 25px;
+            margin-bottom: 55px;
+
+            &.offset-left {
+                margin-left: 0;
+            }
+        }
+
+        @include to(480px) {
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            column-gap: 10px;
+            row-gap: 12px;
+        }
+    }
+
+    &__tab-block {
+        margin-bottom: 20px;
+
+        @include to(770px) {
+            margin-bottom: 0;
+        }
+
+        @include to(480px) {
+            margin-bottom: 10px;
+            margin-right: 10px;
+
+            .camera__tab {
+                min-width: calc(50vw - 25px);
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    &__content {
+        width: 80%;
+
+        iframe {
+            width: 100%;
+            height: 70vh;
+
+            @include to(1440px) {
+                height: 63vh;
+            }
+        }
+
+        @include to(770px) {
+            width: 100%;
+            margin-bottom: 40px;
+
+            iframe {
+                height: 340px;
+            }
+        }
+
+        @include to(480px) {
+            order: -1;
+
+            iframe {
+                height: 201px;
+            }
+        }
+    }
+}

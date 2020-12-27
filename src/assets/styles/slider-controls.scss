@@ -1,0 +1,138 @@
+.slider-controls {
+    display: flex;
+
+    &__block {
+        position: relative;
+        display: flex;
+        height: 42px;
+        align-items: center;
+        border-radius: 60px;
+        min-width: 156px;
+        padding-left: 24px;
+        cursor: pointer;
+        transition: all .6s;
+
+        @include to(800px) {
+            height: auto;
+        }
+
+        @include to(800px) {
+            background-color: #fff;
+        } 
+
+        @include to(480px) {
+            min-width: auto;
+            padding-left: 0;
+        }
+
+        &:hover {
+            background-color: #fff;
+
+            span {
+                opacity: 1;
+            }
+
+            .intro-controls__right {
+                left: calc(100% - 42px);
+            }
+        }
+
+        span {
+            font-family: $default-font;
+            color: $purple;
+            font-weight: 500;
+            opacity: 0;
+            transition: all .4s;
+
+            @include to(800px) {
+                display: block;
+                opacity: 1;
+            }
+
+            @include to(480px) {
+                display: none;
+            }
+        }
+
+        .intro-controls__right {
+            transition: all .6s;
+            position: absolute;
+            left: 0;
+            &::before {
+                transform: rotate(0deg);
+            }
+
+            @include to(770px) {
+                position: static;
+                margin-left: auto;
+            }
+        }
+    }
+
+    &__dots {
+        margin-right: 10px;
+
+        .slick-dots {
+            display: flex;
+
+            li.slick-active {
+                button::after {
+                    background-color: $green;
+                }
+            }
+
+            button {
+                font-size: 0;
+                position: relative;
+                border: none;
+                background-color: transparent;
+
+                &::after {
+                    content: "";
+                    display: block;
+                    width: 8px;
+                    height: 8px;
+                    background-color: #fff;
+                    border-radius: 50%;
+                    margin-right: 13px;
+
+                    @include to(1440px) {
+                        width: 6px;
+                        height: 6px;
+                    }
+                }
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+
+        &--violet {
+            .slick-dots {
+                li.slick-active {
+                    button::after {
+                        background-color: $purple;
+                    }
+                }
+            }
+        }
+    }
+
+    &__arrows {
+        display: flex;
+        align-items: center;
+    }
+
+    &__left {
+        margin-right: 27px;
+    }
+
+    &__left,
+    &__right {
+        @include to(480px) {
+            width: 40px !important;
+            height: 40px !important;
+        }
+    }
+}
