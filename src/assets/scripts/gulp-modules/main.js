@@ -40,7 +40,7 @@ ScrollTrigger.refresh();
     })
   })
 
-  $('#slider-1').clone().removeAttr('id').attr('id', 'slider-2').appendTo('body');
+  $('#slider-1').clone().removeAttr('id').attr('id', 'slider-2').appendTo($('.intro'));
   $('#slider-2').on('init afterChange', (_, slick, currentSlide = 0) => {
     const current = $(slick.$slides[currentSlide])
     current.find('.intro__wrap').hide()
@@ -48,7 +48,6 @@ ScrollTrigger.refresh();
 
   $('#slider-1').on('init afterChange', (_,slick,currentSlide = 0) => {
     const current = $(slick.$slides[currentSlide])
-
     current.find('.intro__promo-status-current').text(`0${currentSlide + 1} / `)
     current.find('.intro__promo-status-total').text(`0${slick.$slides.length}`)
     current.find('.intro__wrap').show()
